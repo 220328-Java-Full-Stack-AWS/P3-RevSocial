@@ -5,7 +5,7 @@ import { NgForm } from '@angular/forms';
 import { faHeart, faEllipsis, faBookmark, faComment, faShareFromSquare, faFaceGrinTongueSquint, faFaceGrinStars } from '@fortawesome/free-solid-svg-icons';
 import { GiphyService } from 'src/app/services/giphy.service';
 import { CommentService } from '../../services/comment.service';
-
+import { PostService } from 'src/app/services/post.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,7 +13,7 @@ import { CommentService } from '../../services/comment.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public CommentService: CommentService, public gifService: GiphyService) { }
+  constructor(public CommentService: CommentService, public gifService: GiphyService,public postService:PostService) { }
 
   ngOnInit(): void {
     // this.getAllComments();
@@ -26,7 +26,17 @@ export class HomeComponent implements OnInit {
   public comments: any = [];
   public currentDate = new Date();
   public post: any;
-
+  
+  public onAddPost(post:NgForm){
+    this.postService.createPost(post.value).subscribe(
+      (response: any) => {
+        console.log(response);
+      },
+      (error: HttpErrorResponse) => {
+        console.log(error.message)
+      }
+    )
+  }
   // Back End Work
   public getCommentById(id: number){
     this.CommentService.getCommentById(id).subscribe(

@@ -1,3 +1,11 @@
+/**
+ * Author(s): William Bjerke
+ * Contributor(s):
+ * Purpose:   connect to UserPostsController
+ */
+
+
+
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -40,7 +48,7 @@ postLifetime:String;
 dateCreated:String;
 }
 //temporary, probably
-export let baseUrl:String='http://localhost:4200'
+export let baseUrl:String='http://localhost:8080'
 export interface User{
   userId:number;
   username:string;
