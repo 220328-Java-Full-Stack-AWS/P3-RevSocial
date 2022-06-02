@@ -69,7 +69,7 @@ public class ReplyController {
             return new HttpResponseDto(400, "Failed to update reply", reply);
         } else {
             res.setStatus(200);
-            return new HttpResponseDto(200, "Successfully updated reply: " + reply.getMessage(), reply);
+            return new HttpResponseDto(200, "Successfully updated reply. " + reply.getMessage(), reply);
         }
     }
 
