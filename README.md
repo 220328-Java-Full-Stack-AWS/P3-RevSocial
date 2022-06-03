@@ -1,5 +1,5 @@
 # Project 3 Revamedia
-
+## NOTE: Revamedia has been [moved](https://github.com/Revature-Revamedia/Revamedia)
 ## Summary
 Revamedia is a social media app which allows Revature employees to communicate amongst each other. As a user, you will be able to register and log in. Users will also be able to search for others, follow them, create groups and teams. In addition, Revamedia is also rich with customizables features such as light and dark mode, changing passwords, notifications, and more. Lastly, Revamedia would like to keep a clean environment and includes a profanity filter to keep it professional.
 
